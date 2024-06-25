@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TSLA Stock Data</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="yahoo.js"></script>
+    <style>
+      .stock-data {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+      .stock-data table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .stock-data th,
+      .stock-data td {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+      .stock-data th {
+        background-color: #f4f4f4;
+      }
+      #chartContainer {
+        width: 80%;
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stock-data">
+      <div style="margin-bottom: 20px">
+        <input
+          type="date"
+          name="startDate"
+          id="startDate"
+          style="margin-right: 10px"
+        />
+        <input type="date" name="endDate" id="endDate" />
+      </div>
+      <input
+        type="search"
+        id="stockSymbol"
+        placeholder="Enter a Stock Ticker."
+      />
+      <button type="button" id="loadDataButton">SUBMIT</button>
+      <h1>TSLA Stock Data</h1>
+      <div style="margin-bottom: 20px">
+        <label for="dataType">Select Price Option: </label>
+        <select id="dataType">
+          <option value="all">All</option>
+          <option value="open">Open</option>
+          <option value="high">High</option>
+          <option value="low">Low</option>
+          <option value="close">Close</option>
+        </select>
+      </div>
+      <div id="chartContainer">
+        <canvas id="stockChart"></canvas>
+      </div>
+      <table id="stockTable">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Open</th>
+            <th>High</th>
+            <th>Low</th>
+            <th>Close</th>
+            <th>Volume</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Stock data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
