@@ -38,6 +38,7 @@ function logFirstTodo(): Todo {
 
 function showCompleted(): Todo[] {
   // 배열의 각 요소에 대해 콜백함수의 결과가 true를 반환하는 요소들로 새로운 배열을 생성
+  // filter(item, index)에서 index 인자는 생략 가능
   return todoItems.filter((item) => item.done);
 }
 
