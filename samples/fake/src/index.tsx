@@ -58,7 +58,8 @@ const children = D.makeArray(10).map((notUsed, index) => (
     <img src={D.randomAvatar()} width={100} height={100} />
   </div>
 ));
-const rootVirtualDOM = <div>{children}</div>;
+// const rootVirtualDOM = <div>{children}</div>;
+const rootVirtualDOM = <App />;
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
