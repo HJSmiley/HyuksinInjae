@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import * as D from "./data";
 import "./index.css";
+import "@fontsource/material-icons";
 
 const children = D.makeArray(10).map((notUsed, index) => (
   <div key={index}>
