@@ -5,6 +5,7 @@ import type {
   PropsWithChildren,
 } from "react";
 
+import { MinMaxWidthHeight } from "./MinMaxWidthHeight";
 import type { WidthHeight } from "./WidthHeight";
 import { LeftRightTopBottom } from "./LeftRightTopBottom";
 
@@ -15,14 +16,15 @@ export type ReactDivProps = DetailedHTMLProps<
 
 export type DivProps = ReactDivProps &
   PropsWithChildren<WidthHeight> &
-  LeftRightTopBottom & {
+  LeftRightTopBottom &
+  MinMaxWidthHeight & {
     src?: string;
   };
 
 // prettier-ignore
 export const Div: FC<DivProps> = ({
-  width, height, style: _style, src, left, right, top, bottom, ...props
+  width, height, style: _style, src, left, right, top, bottom, minWidth, maxWidth, minHeight, maxHeight, ...props
 }) => {
-  const style = {..._style, width, height, backgroundImage: src && `url(${src})`, left, right, top, bottom};
+  const style = {..._style, width, height, backgroundImage: src && `url(${src})`, left, right, top, bottom, minWidth, maxWidth, minHeight, maxHeight};
   return <div {...props} style={style}></div>
 }
