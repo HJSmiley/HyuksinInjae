@@ -19,9 +19,9 @@ export default function App() {
       <MinMaxTest />
       <WrapTest />
       <DirectionTest /> */}
-      {/* <ButtonTest /> */}
-      {/* <InputTest /> */}
-      <ModalTest />
+      <ButtonTest />
+      <InputTest />
+      {/* <ModalTest /> */}
     </main>
   );
 }
