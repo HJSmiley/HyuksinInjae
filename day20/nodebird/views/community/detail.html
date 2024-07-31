@@ -1,0 +1,25 @@
+// list의 상세 item
+<span>{{data}}</span>
+
+<!-- {% for item in data %}
+<div class="twit">
+  <input type="hidden" value="{{item.id}}" class="twit-user-id" />
+  <div class="twit-author">{{item.nick}}</div>
+  {% if not followingIdList.includes(item.id) and item.id !== user.id %}
+  <button class="twit-follow">팔로우하기</button>
+  {% endif %}
+  <div class="twit-content">{{item.content}}</div>
+  {% if item.img %}
+  <div class="twit-img"><img src="{{item.img}}" alt="섬네일" /></div>
+  {% endif %}
+</div>
+{% endfor %} -->
+
+{% for item in data %}
+<div>
+  <span>item.id</span>
+  <span>item.name</span>
+  <span>item.married</span>
+  <br />
+</div>
+{% endfor %}
